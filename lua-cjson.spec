@@ -3,8 +3,8 @@
 %define luadatadir %{_datadir}/lua/%{luaver}
 
 Name:		lua-cjson
-Version:	2.1devel
-Release:	1%{?dist}
+Version:	2.1.0
+Release:	2%{?dist}
 Summary:	A fast JSON encoding/parsing module for Lua
 
 Group:		Development/Libraries
@@ -50,7 +50,7 @@ rm -rf "$RPM_BUILD_ROOT"
 
 %files
 %defattr(-,root,root,-)
-%doc LICENSE NEWS performance.html performance.txt manual.html manual.txt rfc4627.txt THANKS
+%doc LICENSE NEWS performance.txt manual.txt rfc4627.txt THANKS
 %{lualibdir}/*
 %{luadatadir}/*
 %{_bindir}/*
