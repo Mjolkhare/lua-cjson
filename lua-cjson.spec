@@ -4,7 +4,7 @@
 
 Name:		lua-cjson
 Version:	2.1.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	A fast JSON encoding/parsing module for Lua
 
 Group:		Development/Libraries
