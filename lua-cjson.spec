@@ -4,7 +4,7 @@
 
 Name:		lua-cjson
 Version:	2.1.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	A fast JSON encoding/parsing module for Lua
 
 Group:		Development/Libraries
@@ -36,8 +36,8 @@ make %{?_smp_mflags} CFLAGS="%{optflags}" LUA_INCLUDE_DIR="%{_includedir}"
 %install
 rm -rf "$RPM_BUILD_ROOT"
 make install DESTDIR="$RPM_BUILD_ROOT" LUA_CMODULE_DIR="%{lualibdir}"
-make install-extra DESTDIR="$RPM_BUILD_ROOT" LUA_MODULE_DIR="%{luadatadir}" \
-	LUA_BIN_DIR="%{_bindir}"
+#make install-extra DESTDIR="$RPM_BUILD_ROOT" LUA_MODULE_DIR="%{luadatadir}" \
+#	LUA_BIN_DIR="%{_bindir}"
 
 
 %clean
@@ -50,10 +50,10 @@ rm -rf "$RPM_BUILD_ROOT"
 
 %files
 %defattr(-,root,root,-)
-%doc LICENSE NEWS performance.txt manual.txt rfc4627.txt THANKS
+#%doc LICENSE NEWS performance.txt manual.txt rfc4627.txt THANKS
 %{lualibdir}/*
-%{luadatadir}/*
-%{_bindir}/*
+#%{luadatadir}/*
+#%{_bindir}/*
 
 
 %changelog

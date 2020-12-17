@@ -119,3 +119,6 @@ install-extra:
 
 clean:
 	rm -f *.o $(TARGET)
+
+rpm:
+	rpmbuild -ba lua-cjson.spec
